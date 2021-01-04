@@ -1,18 +1,185 @@
-/* Error: Expected expression.
- *   ,
- * 9 | $background-light : ;
- *   |                     ^
- *   '
- *   sass\librairies\variables.scss 9:21  @import
- *   sass\style.scss 1:9                  root stylesheet */
+@charset "UTF-8";
+/*couleurs principales*/
+/*couleurs de fond*/
+/*couleurs de fond*/
+/* police */
+/*
+ligne a écrire dans le terminal pour compiler le SASS cers CSS :
+" ./dart-sass/sass sass/style.scss style.css --watch "
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a   \2577 \a 9 \2502  $background-light : ;\d\a   \2502                      ^\a   \2575 \a   sass\\librairies\\variables.scss 9:21  @import\a   sass\\style.scss 1:9                  root stylesheet";
+*/
+* {
+  width: auto;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: Roboto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  box-shadow: 0px 0px 8px #00000046;
+}
+header img {
+  object-fit: contain;
+  height: 8vh;
+  width: 80%;
+}
+
+.localisation {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #eaeaea;
+  width: 100%;
+  height: 8vh;
+  font-weight: bold;
+}
+.localisation i {
+  width: 2em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  padding: 3%;
+  background-color: #f6f6f6;
+  width: auto;
+  height: 50vh;
+}
+main h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+main a button {
+  padding: 1.2em 3em;
+  border-radius: 25px;
+  background-image: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  border: none;
+  color: white;
+  box-shadow: 0px 0px 8px #00000046;
+}
+
+.explication_fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50vh;
+  padding: 3%;
+}
+
+.etape_fonctionnement {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #f6f6f6;
+  padding: 1.5em 3em;
+  box-shadow: 0px 0px 8px #00000046;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.numero_etape {
+  width: 2em;
+  height: 2em;
+  background-color: #9356DC;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
+  align-self: center;
+  padding: 1.5%;
+}
+.numero_etape p {
+  color: white;
+}
+
+.liste_restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3%;
+  height: 140vh;
+  background-color: #f6f6f6;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 30vh;
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px #00000046;
+  position: relative;
+}
+.restaurant img {
+  object-fit: cover;
+  height: 70%;
+}
+.restaurant .btn_nouveau {
+  background-color: #99e2d0;
+  color: #008766;
+  font-weight: bold;
+  padding: 2%;
+  width: 5em;
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  text-align: center;
+  border-radius: 5px;
+}
+.restaurant .description_restaurant {
+  display: flex;
+  background-color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2%;
+}
+.restaurant .text_description_restaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2%;
+}
+.restaurant .text_description_restaurant i {
+  width: 2em;
+}
+
+footer {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #353535;
+  color: white;
+  text-decoration: none;
+}
+footer .Proposer_un_restaurant {
+  display: flex;
+  width: 100%;
+}
+footer .Proposer_un_restaurant .Devenir_partenaire {
+  display: flex;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

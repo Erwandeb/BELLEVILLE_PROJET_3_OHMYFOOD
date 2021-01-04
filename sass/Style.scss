@@ -32,7 +32,7 @@ header{
     img{
         object-fit: contain;
         height: 8vh;
-        width: 60%;
+        width: 80%;
     }
 }
 
@@ -40,7 +40,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color : $background-light;
+    background-color : $background-medium;
     width: 100%;
     height: 8vh;
     font-weight: bold;
@@ -60,10 +60,10 @@ main{
     background-color : $background-light;
     width: auto;
     height: 50vh;
-
     h1{
         font-weight: bold;
         font-size: 1.5rem;
+    }
 
         a button{
             padding : 1.2em 3em;
@@ -74,7 +74,7 @@ main{
             box-shadow : $ombrage;
         }
     }
-}
+
 
 .explication_fonctionnement{
     display:flex;
@@ -132,36 +132,49 @@ main{
     height: 30vh;
     border-radius: 15px;
     box-shadow : $ombrage;
+    position: relative;
 
     img{
         object-fit: cover;
         height: 70%;
+        
+    }
+        
+    .btn_nouveau{
+            background-color :$green-background;
+            color:$green-font;
+            font-weight:bold;
+            padding: 2%;
+            width: 5em;
+            position:absolute;
+            top: 10%;
+            right: 8%;
+            text-align: center;
+            border-radius: 5px;
+    }
+    
 
-        .description_restaurant{
+    .description_restaurant{
             display: flex;
             background-color:white;
             text-align: center;
             align-items: center;
             justify-content: space-between;
             padding: 2%;
-            background-color: red;
-
-
-            .text_description_restaurant{
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 2%;
-                background-color: red;
-
-                i {
-                    width :2em;
-                }
-            }
-            
-        }
     }
-}
+
+    .text_description_restaurant{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+         padding: 2%;
+
+            i {
+                width :2em;
+            }
+        }
+            
+ }
 
 footer{
     padding: 2%;
@@ -170,13 +183,17 @@ footer{
     align-items: flex-start;
     background-color: $background-bold;
     color:white;
+    text-decoration: none;
     .Proposer_un_restaurant{
         display: flex;
-        justify-content: space-between;
-        width: 20%;
+        width: 100%;
         .Devenir_partenaire{
             display: flex;
         }
+    }
+    a {
+        text-decoration:none;
+        color :white;
     }
 }
 
