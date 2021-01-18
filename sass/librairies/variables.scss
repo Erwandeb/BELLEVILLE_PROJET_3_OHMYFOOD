@@ -1,6 +1,7 @@
 
 /*couleurs principales*/
 $primary-color: #9356DC ;
+$primary-color-light: #9256dc83 ;
 $secondary-color : #FF79DA;
 $third-color: #99E2D0;
 
@@ -9,11 +10,23 @@ $background-light : #f6f6f6;
 $background-medium : #eaeaea;
 $background-bold : #353535;
 $green-background: #99e2d0;
+$background-light-hover:#fdfbfb;
 
 
 /*couleurs de fond*/
 $ombrage :  0px 0px 8px  #00000046;
+$calltoaction :linear-gradient(to bottom, $secondary-color  0%, $primary-color 100%);
+$loveaction:linear-gradient(to top, $primary-color 0%,$secondary-color 100% );
+$calltoactionhover: linear-gradient(to bottom, #ff79d9f1  0%, #9256dce7 100%);
+$ombragehover:0px 0px 16px  #00000046;
 
 /* police */
 $green-font : #008766;
+$titrestyle: 'Shrikhand', cursive;
+
+/* Tailles */
+$maquette-size: 375px;
+$object-size:335px;
+$produit-size:350px;
+
 

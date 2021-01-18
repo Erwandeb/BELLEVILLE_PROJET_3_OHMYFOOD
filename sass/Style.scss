@@ -3,52 +3,97 @@
 
 
 /*
-ligne a écrire dans le terminal pour compiler le SASS cers CSS :
+ligne a écrire dans le terminal pour compiler le SASS vers CSS :
 " ./dart-sass/sass sass/style.scss style.css --watch "
 
 */
 
 
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------ PAGE INDEX.HTML-------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
 *{
-    width: auto;
-    overflow-x: hidden;
     padding: 0;
     margin:0;
     box-sizing: border-box;
 }
+.general_container{
+    align-items:center;
+    margin:auto;
+    width:375px;
+    animation: chargement_page_accueil 2s ease-in-out;
+}
+
+.spinner_container{
+    position: absolute;
+    top: 50%;
+    right:50%;
+    left:50%;
+    animation: intro_loading_spinner 2s forwards;
+    background-color: red;
+        .fa-spinner{
+            width: 40px;
+            height:40px;
+            animation:spinner 1s linear infinite;
+            align-items: center;
+            font-size: 40px;
+        }
+}
 
 body{
     font-family: Roboto;
+    
 }
-
+/*--------------Header du site et Logo----------------------------------*/
 header{
     display:flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: auto;
-    box-shadow: $ombrage;
+    width: $maquette-size;
 
     img{
         object-fit: contain;
-        height: 8vh;
-        width: 80%;
+        height: 45px;
+        width: 175px;
     }
 }
 
+
+
+
+/*--------------Section localisation en début de site ----------------------------------*/
 .localisation{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    text-align: center;
+    justify-content: center;
     background-color : $background-medium;
-    width: 100%;
-    height: 8vh;
-    font-weight: bold;
+    width: $maquette-size;
+    height: 50px;
+    font-weight: 200;
+    box-shadow: inset 0px 3px 1px #d5d5d5;
+
+    .details_localisation{
+        width:160px;
+        height:25px;
+        display: flex;
+        justify-content: space-between;
+    }
 
     i{
         width: 2em;
     }
+
+    p{
+        font-size: 16px;
+        font-weight:normal;
+    }
 }
+
+
+/*--------------Introduction au site avec balise H1 et  call to action ----------------------------------*/
 
 main{
     display: flex;
@@ -58,142 +103,372 @@ main{
     align-items: center;
     padding: 3%;
     background-color : $background-light;
-    width: auto;
-    height: 50vh;
+    width: $maquette-size;
+    height: 290px;
     h1{
         font-weight: bold;
         font-size: 1.5rem;
     }
 
-        a button{
-            padding : 1.2em 3em;
+        a {
+            
             border-radius : 25px;
-            background-image: linear-gradient(to bottom, $secondary-color  0%, $primary-color 100%);
+            background-image: $calltoaction;
             border:none;
             color :white;
+            width:215px;
+            height:50px;
             box-shadow : $ombrage;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+
+            &:hover{
+               transform: scale(1.02) ;
+            }
+            
         }
     }
 
 
-.explication_fonctionnement{
+
+
+
+/*--------------Fonctionnement du site----------------------------------*/
+.fonctionnement_du_site{
     display:flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 50vh;
-    padding: 3%;
+    height: 440px;
+    width: $maquette-size;
+    padding: 20px;
+  
 }
 
-.etape_fonctionnement{
+.regle_fonctionnement{
     display:flex;
     align-items: center;
     text-align:center;
-    justify-content: space-around;
-    width: 100%;
+    width:$object-size;
+    height: 75px;
     background-color:$background-light;
-    padding : 1.5em 3em;
+    padding : 0;
     box-shadow : $ombrage;
     border-radius : 15px;
     font-weight: bold;
-
-}
-
-.numero_etape{
-    width:2em;
-    height:2em;
-    background-color:$primary-color;
-    border-radius:50%;
-    position: absolute;
-    left: 0;
-    align-items: center;
-    display: table-cell;
-    vertical-align:middle;
-    align-self:center;
-    padding: 1.5%;
- 
-    p{
-        color:white;
-    }
-}
-
-.liste_restaurants{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 3%;
-    height: 140vh;
-    background-color:$background-light;
-}
-
-.restaurant{
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: 30vh;
-    border-radius: 15px;
-    box-shadow : $ombrage;
     position: relative;
+    padding-left:30px;
 
-    img{
-        object-fit: cover;
-        height: 70%;
-        
-    }
-        
-    .btn_nouveau{
-            background-color :$green-background;
-            color:$green-font;
-            font-weight:bold;
-            padding: 2%;
-            width: 5em;
-            position:absolute;
-            top: 10%;
-            right: 8%;
-            text-align: center;
-            border-radius: 5px;
+    &:hover{
+        background-color: $background-light-hover;
+        box-shadow: $ombragehover;
     }
     
 
-    .description_restaurant{
-            display: flex;
-            background-color:white;
-            text-align: center;
-            align-items: center;
-            justify-content: space-between;
-            padding: 2%;
+    .choissisez_restaurant{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align:center;
+        width: 220px; 
+        height:30px;
+
+        p{
+            font-weight: 400;
+            font-size: 16px;
+        }
+        
     }
 
-    .text_description_restaurant{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-         padding: 2%;
+    .composez_menu{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align:center;
+        width: 202px;
+        height:30px;
 
-            i {
-                width :2em;
-            }
+        p{
+            font-weight: 400;
         }
-            
- }
+    }
 
+    .dégustez_restaurant{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align:center;
+        width: 210px;
+        height:30px;
+
+        p{
+            font-weight: 400;
+        }
+    }
+}
+
+.number_purple_circle{
+    display: inline-block;
+    width:25px;
+    height:25px;
+    background-color:$primary-color;
+    border-radius:50%;
+    position: absolute;
+    left: -10px;
+    padding: 5px;
+    z-index:2;
+ 
+    p{
+        color:white;
+        font-size:12px;
+        font-weight: 400;
+    }
+}
+
+
+
+/*--------------Section restaurant ----------------------------------*/
+
+
+#restaurants{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    height: 1230px;
+    width:$maquette-size;
+    background-color:$background-light;
+
+    h2{
+        width: $object-size;
+        height:30px;
+    }
+
+    
+        .card_restaurant{
+            display: flex;
+            flex-direction: column;
+            width:$object-size;
+            height: 250px;
+            border-radius: 15px;
+            box-shadow : $ombrage;
+            position: relative;
+
+            &:hover{
+                transform: scale(1.01) ;
+             }
+            
+            a{
+            text-decoration: none;
+
+                img{
+                    object-fit: cover;
+                    height: 175px;
+                    width:$object-size;
+                    border-radius: 15px 15px 0px 0px;
+                }
+        
+                .btn_nouveau {
+                    background-color :$green-background;
+                    color:$green-font;
+                    font-weight:500;
+                    font-size:14px;
+                    padding: 6px;
+                    width: 80px;
+                    height:30px;
+                    position:absolute;
+                    top: 13px;
+                    right: 12px;
+                    text-align: center;
+                    border-radius: 5px;
+                }
+        
+
+                .description_restaurant{
+                    display: flex;
+                    background-color:white;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 2%;
+                    height:77px;
+                    width:$object-size;
+                    border-radius: 0px 0px 15px 15px;
+                    position: relative;
+            
+
+                        .text_description_restaurant{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            padding: 2%;
+                            text-decoration: none;
+                                    h3{
+                                        text-decoration: none;
+                                        color:black;
+                                    }
+                                    p{
+                                        text-decoration: none;
+                                        color:black;
+                                    }
+                                }
+                     
+                                .far{
+                                    opacity: 100%;
+                                    position: absolute;
+                                    right: 10px;
+                                    font-size: 18px;
+                                    z-index: 0;
+                                    font-weight: 200;
+                                    &:hover{
+                                            font-weight: 900;
+                                            background-image: $loveaction;
+                                            -webkit-text-fill-color: transparent;
+                                            -webkit-background-clip: text; 
+                                            animation: heart 0.15s cubic-bezier(0,.69,1,-0.05);
+                                        }
+                                }
+                                @keyframes heart {
+                                    0%{
+                                        opacity: 0%;
+                                    }
+                                    50% {
+                                        opacity: 20%;
+                                    }
+                                    60%{
+                                        opacity: 35%;
+                                    }
+                                    70%{
+                                        opacity: 40%;
+                                    }
+                                    80%{
+                                        opacity: 45%;
+                                    }
+                                    90%{
+                                        opacity: 50%;
+                                    }
+                                    100%{
+                                        opacity: 100%;
+                                    }
+                                }    
+                    }
+                } 
+        }
+}
+    
+
+ /*--------------Footer ----------------------------------*/
 footer{
-    padding: 2%;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     background-color: $background-bold;
     color:white;
     text-decoration: none;
-    .Proposer_un_restaurant{
-        display: flex;
-        width: 100%;
-        .Devenir_partenaire{
-            display: flex;
+    width:$maquette-size;
+    height:200px;
+
+    a {
+        
+        img {
+            width:100px;
+            height:30px;
+            margin-top:5px;
+            margin-bottom:5px;
+
+            &:hover{
+                transform: scale(1.02);
+            }
         }
     }
+
+    .Proposer_un_restaurant{
+        display: flex;
+        width: 180px;;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+
+        i{
+            font-size: 12px;
+        }
+
+        a {
+            &:hover{
+                font-weight:bold;
+            }
+        }
+
+    }
+
+    .Devenir_partenaire{
+        display: flex;
+        width: 148px;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+      
+        i{
+            font-size: 12px;
+        }
+        a {
+            &:hover{
+                font-weight:bold;
+            }
+        }
+    }
+    
+
     a {
         text-decoration:none;
         color :white;
+        &:hover{
+            font-weight:bold;
+        }
     }
 }
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------ FIN INDEX.HTML--------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
 
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------ KEYFRAMES--------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+@keyframes chargement_page_accueil {
+    0% {
+        opacity: 0%;
+    }
+    90%{
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+     }
+    }
+
+@keyframes intro_loading_spinner {
+    0% {
+        opacity: 100%;
+    }
+    90%{
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+     }
+    }
+
+
+    @keyframes spinner {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+  

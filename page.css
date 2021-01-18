@@ -1,0 +1,396 @@
+@charset "UTF-8";
+/*couleurs principales*/
+/*couleurs de fond*/
+/*couleurs de fond*/
+/* police */
+/* Tailles */
+/*
+ligne a écrire dans le terminal pour compiler le SASS vers CSS :
+" ./dart-sass/sass sass/pages.scss page.css --watch "
+
+*/
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------ PAGE HTML-------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.general_container {
+  align-items: center;
+  margin: auto;
+  width: 375px;
+}
+
+body {
+  font-family: Roboto;
+  height: auto;
+}
+
+/*--------------Header du site et Logo----------------------------------*/
+.en-tete-logo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 375px;
+  position: relative;
+  height: 63px;
+  width: 375px;
+}
+.en-tete-logo a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 63px;
+  width: 35px;
+}
+.en-tete-logo a i {
+  font-size: 18px;
+  position: absolute;
+  left: 22px;
+  color: black;
+}
+.en-tete-logo a i:hover {
+  transform: scale(1.08);
+}
+.en-tete-logo a img {
+  object-fit: contain;
+  height: 45px;
+  width: 165px;
+}
+
+/*--------------Image illustration du site internet en début de page ----------------------------------*/
+.illustration_restaurant {
+  width: 375px;
+  height: 270px;
+  position: relative;
+  object-fit: cover;
+  z-index: -1;
+}
+.illustration_restaurant img {
+  width: 375px;
+  height: 330px;
+  object-fit: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/*-------------MENU----------------------------------*/
+.menu {
+  border-radius: 35px 35px 0px 0px;
+  width: 375px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 35px;
+  background-color: #f6f6f6;
+  /*-----section en chantier---------*/
+}
+.menu .nom_du_restaurant {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 335px;
+  height: 35px;
+  position: relative;
+  /*-----section en chantier---------*/
+}
+.menu .nom_du_restaurant h1 {
+  font-family: "Shrikhand", cursive;
+}
+.menu .nom_du_restaurant .far {
+  opacity: 100%;
+  position: absolute;
+  right: 10px;
+  font-size: 18px;
+  z-index: 0;
+  font-weight: 200;
+  cursor: pointer;
+}
+.menu .nom_du_restaurant .far:hover {
+  font-weight: 900;
+  background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: heart 0.15s cubic-bezier(0, 0.69, 1, -0.05);
+}
+@keyframes heart {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 20%;
+  }
+  60% {
+    opacity: 35%;
+  }
+  70% {
+    opacity: 40%;
+  }
+  80% {
+    opacity: 45%;
+  }
+  90% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.menu .entree_plat_dessert {
+  height: auto;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 35px;
+  align-items: center;
+  /*------------------------------produit-----------------------*/
+}
+.menu .entree_plat_dessert .titre_entree_plat_dessert {
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 350px;
+}
+.menu .entree_plat_dessert .titre_entree_plat_dessert h2 {
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 20px;
+}
+.menu .entree_plat_dessert .titre_entree_plat_dessert .titre_souligné {
+  width: 40px;
+  height: 4px;
+  background-color: #99E2D0;
+}
+.menu .entree_plat_dessert .produit {
+  height: 70px;
+  width: 350px;
+  border-radius: 15px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0px 0px 8px #00000046;
+  padding: 5px;
+  margin: 7px;
+  position: relative;
+  transition: all ease-in-out 0.6s;
+  overflow: hidden;
+  cursor: pointer;
+  animation: intromenu 5s ease-in-out;
+}
+.menu .entree_plat_dessert .produit .description_produit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: auto;
+  height: 70px;
+  padding: 10px;
+  overflow: hidden;
+  transition: all ease-in-out 0.6s;
+}
+.menu .entree_plat_dessert .produit .description_produit h3 {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+}
+.menu .entree_plat_dessert .produit .description_produit p {
+  font-weight: 300;
+  font-size: 14px;
+  text-decoration: none;
+}
+.menu .entree_plat_dessert .produit h4 {
+  position: absolute;
+  right: 22px;
+  top: 40px;
+  text-decoration: none;
+  transition: all ease-in-out 0.6s;
+}
+.menu .entree_plat_dessert .produit .validation_produit {
+  position: absolute;
+  width: 60px;
+  background-color: #99e2d0;
+  right: 0px;
+  top: 0px;
+  height: 70px;
+  z-index: 3;
+  border-radius: 0px 15px 15px 0px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  opacity: 100%;
+  right: -62px;
+  transition: all ease-in-out 0.6s;
+  overflow: hidden;
+}
+.menu .entree_plat_dessert .produit .validation_produit i {
+  color: white;
+  font-size: 16px;
+  transition: all ease-in-out 0.6s;
+}
+.menu .entree_plat_dessert .produit:hover .description_produit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 220px;
+  height: 70px;
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: all ease-in-out 0.6s;
+}
+.menu .entree_plat_dessert .produit:hover .description_produit h3 {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  width: 210px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu .entree_plat_dessert .produit:hover .description_produit p {
+  font-weight: 300;
+  font-size: 14px;
+  width: 210px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu .entree_plat_dessert .produit:hover h4 {
+  position: absolute;
+  right: 80px;
+  top: 40px;
+  text-decoration: none;
+  transition: all ease-in-out 0.6s;
+}
+.menu .entree_plat_dessert .produit:hover .validation_produit {
+  position: absolute;
+  width: 60px;
+  background-color: #99e2d0;
+  right: 0px;
+  top: 0px;
+  height: 70px;
+  z-index: 3;
+  border-radius: 0px 15px 15px 0px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  opacity: 100%;
+  transition: all ease-in-out 0.6s;
+}
+.menu .entree_plat_dessert .produit:hover .validation_produit i {
+  color: white;
+  font-size: 16px;
+  transition: all ease-in-out 0.6s;
+  opacity: 100%;
+  transform: rotate(365deg);
+  transition-delay: 0.1s;
+}
+
+/*--------Call to action---------------*/
+a button {
+  border-radius: 25px;
+  background-image: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  border: none;
+  color: white;
+  width: 215px;
+  height: 50px;
+  box-shadow: 0px 0px 8px #00000046;
+  bottom: 80px;
+  font-weight: 400;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  cursor: pointer;
+}
+a button:hover {
+  background-image: linear-gradient(to bottom, #ff79d9f1 0%, #9256dce7 100%);
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+/*--------------Call to action----------------------------------*/
+/*--------------Footer ----------------------------------*/
+footer {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #353535;
+  color: white;
+  text-decoration: none;
+  width: 375px;
+  height: 200px;
+}
+footer a img {
+  width: 100px;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+footer a img:hover {
+  transform: scale(1.02);
+}
+footer .Proposer_un_restaurant {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+footer .Proposer_un_restaurant i {
+  font-size: 12px;
+}
+footer .Proposer_un_restaurant a:hover {
+  font-weight: bold;
+}
+footer .Devenir_partenaire {
+  display: flex;
+  width: 148px;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+footer .Devenir_partenaire i {
+  font-size: 12px;
+}
+footer .Devenir_partenaire a:hover {
+  font-weight: bold;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  font-weight: bold;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------ FIN INDEX.HTML--------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+@keyframes intromenu {
+  0% {
+    opacity: 0%;
+    margin: 0px;
+  }
+  50% {
+    opacity: 20%;
+    margin: 0px;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+/*# sourceMappingURL=page.css.map */

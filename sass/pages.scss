@@ -1,0 +1,480 @@
+@import "librairies/variables.scss";
+
+/*
+ligne a écrire dans le terminal pour compiler le SASS vers CSS :
+" ./dart-sass/sass sass/pages.scss page.css --watch "
+
+*/
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------ PAGE HTML-------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+.general_container{
+    align-items:center;
+    margin:auto;
+    width:375px;
+}
+
+body{
+    font-family: Roboto;
+    height: auto;
+}
+
+/*--------------Header du site et Logo----------------------------------*/
+    .en-tete-logo{
+        display:flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: $maquette-size;
+        position: relative;
+        height:63px;
+        width:$maquette-size;
+
+        a{ 
+            display:flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            height:63px;
+            width: 35px;
+        
+                i {
+                    font-size: 18px;
+                    position: absolute;
+                    left:22px;
+                    color:black;
+
+                    &:hover{
+                        transform: scale(1.08);
+                    }
+                }
+        
+            
+            img{
+                object-fit: contain;
+                height: 45px;
+                width: 165px;
+            }
+        }
+    }
+
+
+
+
+
+/*--------------Image illustration du site internet en début de page ----------------------------------*/
+
+.illustration_restaurant{
+    width:$maquette-size;
+    height: 270px;
+    position: relative;
+    object-fit: cover;
+    z-index: -1;
+    
+    img{
+        width:$maquette-size;
+        height:330px;
+        object-fit: cover;
+        background-attachment: fixed;
+        position: relative;
+    
+    }
+}
+
+/*-------------MENU----------------------------------*/
+.menu{
+    border-radius:35px 35px 0px 0px;
+    width: $maquette-size;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35px;
+    background-color: $background-light;
+       
+
+        .nom_du_restaurant{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width:335px;
+        height:35px;
+        position: relative;
+            
+            h1{
+                font-family: 'Shrikhand', cursive;
+            }
+
+            /*-----section en chantier---------*/
+            .far{
+                opacity: 100%;
+                position: absolute;
+                right: 10px;
+                font-size: 18px;
+                z-index: 0;
+                font-weight: 200;
+                cursor: pointer;
+
+                &:hover{
+                        font-weight: 900;
+                        background-image: $loveaction;
+                        -webkit-text-fill-color: transparent;
+                        -webkit-background-clip: text; 
+                        animation: heart 0.15s cubic-bezier(0,.69,1,-0.05);
+                    }
+            }
+
+            @keyframes heart {
+                0%{
+                    opacity: 0%;
+                }
+                50% {
+                    opacity: 20%;
+                }
+                60%{
+                    opacity: 35%;
+                }
+                70%{
+                    opacity: 40%;
+                }
+                80%{
+                    opacity: 45%;
+                }
+                90%{
+                    opacity: 50%;
+                }
+                100%{
+                    opacity: 100%;
+                }
+            }    
+        }  
+
+        /*-----section en chantier---------*/
+    
+
+    .entree_plat_dessert{
+        height:auto;
+        width: $produit-size;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 35px;
+        align-items: center;
+      
+        
+            
+            
+           .titre_entree_plat_dessert{
+            height:32px;
+            display: flex; 
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom:10px;
+            width: $produit-size;
+            
+           
+                h2{
+                    text-transform: uppercase;
+                    font-weight: 200;
+                    font-size: 20px;    
+                }
+
+                .titre_souligné{
+                    width:40px;
+                    height:4px;
+                    background-color: $third-color;
+                }
+           }
+        /*------------------------------produit-----------------------*/
+            .produit{
+                height:70px;
+                width:$produit-size;
+                border-radius: 15px;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                background-color:white;
+                box-shadow: $ombrage ;
+                padding:5px;
+                margin:7px;
+                position: relative;
+                transition: all ease-in-out 0.6s;
+                overflow: hidden;
+                cursor: pointer;
+                animation: intromenu 5s ease-in-out;
+                
+
+                    
+                    .description_produit{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        width: auto;
+                        height:70px;
+                        padding:10px;
+                        overflow: hidden;
+                        transition: all ease-in-out 0.6s;
+
+        
+                        h3{
+                            font-weight:600;
+                            text-decoration: none;
+                            font-size: 16px;
+                        }
+                        
+                        p{
+                            font-weight:300;
+                            font-size: 14px;
+                            text-decoration: none;
+                        }
+                    }
+
+                    h4{
+                        position:absolute;
+                        right:22px;
+                        top:40px;
+                        text-decoration: none;
+                        transition: all ease-in-out 0.6s;
+                    }
+
+                    .validation_produit{
+                        position:absolute;
+                        width: 60px;
+                        background-color:#99e2d0;
+                        right:0px;
+                        top:0px;
+                        height:70px;
+                        z-index: 3;
+                        border-radius: 0px 15px 15px 0px;
+                        align-items: center;
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        opacity: 100%;
+                        right: -62px;
+                        transition: all ease-in-out 0.6s;
+                        overflow: hidden;
+                      
+                        
+
+
+                        i{
+                            color:white;
+                            font-size: 16px;
+                            transition: all ease-in-out 0.6s;
+                        }
+                    }
+
+                    &:hover{
+                        .description_produit{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                            width: 220px;
+                            height:70px;
+                            padding:10px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            transition: all ease-in-out 0.6s;
+                            
+                           
+
+            
+                            h3{
+                                font-weight:600;
+                                text-decoration: none;
+                                font-size: 16px;
+                                width: 210px;
+                                text-overflow: ellipsis; 
+                                overflow: hidden;
+                                white-space: nowrap;
+                            }
+                            
+                            p{
+                                font-weight:300;
+                                font-size: 14px;
+                                width: 210px;
+                                text-decoration: none;
+                                text-overflow: ellipsis; 
+                                overflow: hidden;
+                                white-space: nowrap;
+                            }
+                        }
+    
+                        h4{
+                            position:absolute;
+                            right:80px;
+                            top:40px;
+                            text-decoration: none;
+                            transition: all ease-in-out 0.6s;
+                            
+                        }
+    
+                        .validation_produit{
+                            position:absolute;
+                            width: 60px;
+                            background-color:#99e2d0;
+                            right:0px;
+                            top:0px;
+                            height:70px;
+                            z-index: 3;
+                            border-radius: 0px 15px 15px 0px;
+                            align-items: center;
+                            text-align: center;
+                            display: flex;
+                            justify-content: center;
+                            opacity: 100%;
+                            transition: all ease-in-out 0.6s;
+                            
+                          
+
+                            
+    
+                            i{
+                                color:white;
+                                font-size: 16px;
+                                transition: all ease-in-out 0.6s;
+                                opacity: 100%;
+                                transform: rotate(365deg);
+                                transition-delay: 0.1s;
+                                
+                                
+                            }
+                        }
+    
+                    }
+                } 
+
+            }   } 
+  
+
+
+        /*--------Call to action---------------*/
+        a button{
+        
+            border-radius : 25px;
+            background-image: $calltoaction;
+            border:none;
+            color :white;
+            width:215px;
+            height:50px;
+            box-shadow :$ombrage;
+            bottom: 80px;
+            font-weight: 400;
+            margin-top: 40px;
+            margin-bottom:80px;
+            cursor: pointer;
+
+            &:hover{
+                background-image: $calltoactionhover;
+                font-weight: bold;
+                transition: all 0.2s ease-in-out;
+            }
+        }      
+    
+   
+    
+
+    /*--------------Call to action----------------------------------*/
+    
+ /*--------------Footer ----------------------------------*/
+ footer{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $background-bold;
+    color:white;
+    text-decoration: none;
+    width:$maquette-size;
+    height:200px;
+
+    a {
+        
+        img {
+            width:100px;
+            height:30px;
+            margin-top:5px;
+            margin-bottom:5px;
+
+            &:hover{
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    .Proposer_un_restaurant{
+        display: flex;
+        width: 180px;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+
+        i{
+            font-size: 12px;
+        }
+
+        a {
+            &:hover{
+                font-weight:bold;
+            }
+        }
+
+    }
+
+    .Devenir_partenaire{
+        display: flex;
+        width: 148px;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+      
+        i{
+            font-size: 12px;
+        }
+        a {
+            &:hover{
+                font-weight:bold;
+            }
+        }
+    }
+    
+
+    a {
+        text-decoration:none;
+        color :white;
+        &:hover{
+            font-weight:bold;
+        }
+    }
+}
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------ FIN INDEX.HTML--------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+
+@keyframes intromenu {
+    0% {
+        opacity: 0%;
+        margin:0px
+    } 
+
+    50% {
+        opacity: 20%;
+        margin:0px
+    }
+    100%{
+        opacity: 100%;
+        
+    }
+  
+}
+
