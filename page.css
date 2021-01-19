@@ -89,7 +89,6 @@ body {
   align-items: center;
   padding-top: 35px;
   background-color: #f6f6f6;
-  /*-----section en chantier---------*/
 }
 .menu .nom_du_restaurant {
   display: flex;
@@ -98,7 +97,6 @@ body {
   width: 335px;
   height: 35px;
   position: relative;
-  /*-----section en chantier---------*/
 }
 .menu .nom_du_restaurant h1 {
   font-family: "Shrikhand", cursive;
@@ -185,7 +183,7 @@ body {
   transition: all ease-in-out 0.6s;
   overflow: hidden;
   cursor: pointer;
-  animation: intromenu 5s ease-in-out;
+  animation: intromenu 1.5s cubic-bezier(1, -0.25, 0.76, 1.07);
 }
 .menu .entree_plat_dessert .produit .description_produit {
   display: flex;
@@ -382,14 +380,116 @@ footer a:hover {
 @keyframes intromenu {
   0% {
     opacity: 0%;
-    margin: 0px;
+    margin: 14px;
+  }
+  10% {
+    opacity: 0%;
+    margin: 12px;
   }
   50% {
     opacity: 20%;
-    margin: 0px;
+    margin: 10px;
+  }
+  75% {
+    opacity: 40%;
+    margin: 9px;
+  }
+  85% {
+    opacity: 50%;
+    margin: 7px;
   }
   100% {
     opacity: 100%;
+  }
+}
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------ MEDIAS QUERIES-------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+@media screen and (min-width: 426px) {
+  .general_container {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /*animation: chargement_page_accueil 2s ease-in-out;*/
+  }
+
+  /*----header----*/
+  .en-tete-logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    height: 63px;
+  }
+  .en-tete-logo a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 63px;
+    width: 35px;
+  }
+  .en-tete-logo a i {
+    font-size: 18px;
+    position: absolute;
+    left: 22px;
+    color: black;
+  }
+  .en-tete-logo a i:hover {
+    transform: scale(1.08);
+  }
+  .en-tete-logo a img {
+    object-fit: contain;
+    height: 45px;
+    width: 426px;
+  }
+
+  /*----illustration du restaurant----*/
+  .illustration_restaurant {
+    width: 100%;
+    height: 270px;
+  }
+  .illustration_restaurant img {
+    width: 100%;
+    height: 330px;
+  }
+
+  /*----Menu----*/
+  .menu {
+    border-radius: 35px 35px 0px 0px;
+    height: auto;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35px;
+    background-color: #f6f6f6;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*----Footer ----*/
+  footer {
+    width: 100%;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .general_container {
+    width: 1024px;
+    /*animation: chargement_page_accueil 2s ease-in-out;*/
+  }
+
+  .menu {
+    width: 924px;
+  }
+
+  /*----Footer ----*/
+  footer {
+    width: 100%;
+    align-items: center;
   }
 }
 

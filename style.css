@@ -143,8 +143,7 @@ main a:hover {
   padding-left: 30px;
 }
 .regle_fonctionnement:hover {
-  background-color: #fdfbfb;
-  box-shadow: 0px 0px 16px #00000046;
+  background-color: #f5edff;
 }
 .regle_fonctionnement .choissisez_restaurant {
   display: flex;
@@ -221,6 +220,7 @@ main a:hover {
   border-radius: 15px;
   box-shadow: 0px 0px 8px #00000046;
   position: relative;
+  background-color: white;
 }
 #restaurants .card_restaurant:hover {
   transform: scale(1.01);
@@ -282,6 +282,7 @@ main a:hover {
   font-size: 18px;
   z-index: 0;
   font-weight: 200;
+  color: black;
 }
 #restaurants .card_restaurant a .description_restaurant .far:hover {
   font-weight: 900;
@@ -400,6 +401,159 @@ footer a:hover {
 @keyframes spinner {
   100% {
     transform: rotate(360deg);
+  }
+}
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------ MEDIAS QUERIES-------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+@media screen and (min-width: 426px) {
+  .general_container {
+    width: 100%;
+    /*animation: chargement_page_accueil 2s ease-in-out;*/
+  }
+
+  /*----header----*/
+  header {
+    width: 100%;
+  }
+  header img {
+    object-fit: contain;
+    height: 45px;
+    width: 175px;
+  }
+
+  /*----Localisation----*/
+  .localisation {
+    width: 100%;
+  }
+
+  /*----intro site----*/
+  main {
+    width: 100%;
+  }
+
+  /*----fonctionnement----*/
+  .fonctionnement_du_site {
+    align-items: center;
+    width: 100%;
+  }
+
+  /*----selection restaurants----*/
+  #restaurants {
+    align-items: center;
+    width: 100%;
+  }
+  #restaurants h2 {
+    text-align: center;
+  }
+
+  footer {
+    width: 100%;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .general_container {
+    width: 1024px;
+    /*animation: chargement_page_accueil 2s ease-in-out;*/
+  }
+
+  /*----fonctionnement----*/
+  .fonctionnement_du_site {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+  }
+  .fonctionnement_du_site h2 {
+    position: absolute;
+    top: 5%;
+    left: 424px;
+  }
+  .fonctionnement_du_site .regle_fonctionnement {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 274px;
+    height: 250px;
+    background-color: #f6f6f6;
+    padding: 0;
+    box-shadow: 0px 0px 8px #00000046;
+    border-radius: 15px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 0px;
+  }
+  .fonctionnement_du_site .number_purple_circle {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #9356DC;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: 112px;
+    padding: 5px;
+    z-index: 2;
+  }
+  .fonctionnement_du_site .number_purple_circle p {
+    font-size: 30px;
+  }
+  .fonctionnement_du_site .choissisez_restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 274px;
+    height: 80px;
+  }
+  .fonctionnement_du_site .choissisez_restaurant p {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .fonctionnement_du_site .composez_menu {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 274px;
+    height: 80px;
+  }
+  .fonctionnement_du_site .composez_menu p {
+    font-weight: 400;
+  }
+  .fonctionnement_du_site .dégustez_restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 274px;
+    height: 80px;
+  }
+  .fonctionnement_du_site .dégustez_restaurant p {
+    font-weight: 400;
+  }
+
+  #restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 725px;
+    width: 100%;
+    position: relative;
+    padding: 40px;
+  }
+  #restaurants h2 {
+    position: absolute;
+    top: 15px;
+  }
+  #restaurants .card_restaurant {
+    margin: 10px;
   }
 }
 
