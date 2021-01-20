@@ -6,8 +6,8 @@
 /* Tailles */
 /*
 ligne a écrire dans le terminal pour compiler le SASS vers CSS :
-" ./dart-sass/sass sass/pages.scss page.css --watch "
 
+"./dart-sass/sass sass/pages.scss css/page.css --watch"
 */
 /*-----------------------------------------------------------------------------------------*/
 /*------------------------------ PAGE HTML-------------------------------------------*/
@@ -115,7 +115,7 @@ body {
   background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  animation: heart 0.15s cubic-bezier(0, 0.69, 1, -0.05);
+  animation: heart 0.4s cubic-bezier(0, 0.69, 1, -0.05);
 }
 @keyframes heart {
   0% {
@@ -176,7 +176,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: white;
-  box-shadow: 0px 0px 8px #00000046;
+  box-shadow: 0px 6px 9px 2px #00000030;
   padding: 5px;
   margin: 7px;
   position: relative;
@@ -313,7 +313,7 @@ body {
   color: white;
   width: 215px;
   height: 50px;
-  box-shadow: 0px 0px 8px #00000046;
+  box-shadow: 0px 6px 9px 2px #00000030;
   bottom: 80px;
   font-weight: 400;
   margin-top: 40px;
@@ -359,6 +359,8 @@ footer .Proposer_un_restaurant {
   justify-content: space-between;
   text-align: center;
   align-items: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 footer .Proposer_un_restaurant i {
   font-size: 12px;
@@ -372,6 +374,8 @@ footer .Devenir_partenaire {
   justify-content: space-between;
   text-align: center;
   align-items: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 footer .Devenir_partenaire i {
   font-size: 12px;
@@ -382,6 +386,8 @@ footer .Devenir_partenaire a:hover {
 footer a {
   text-decoration: none;
   color: white;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 footer a:hover {
   font-weight: bold;
@@ -418,6 +424,58 @@ footer a:hover {
 /*-----------------------------------------------------------------------------------------*/
 /*------------------------------ MEDIAS QUERIES-------------------------------------------*/
 /*-----------------------------------------------------------------------------------------*/
+@media screen and (min-width: 376px) {
+  .general_container {
+    width: 100%;
+  }
+
+  /*----header----*/
+  .en-tete-logo {
+    width: 100%;
+  }
+  .en-tete-logo a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 63px;
+    width: 35px;
+  }
+  .en-tete-logo a i {
+    font-size: 18px;
+    position: absolute;
+    left: 22px;
+    color: black;
+  }
+  .en-tete-logo a i:hover {
+    transform: scale(1.08);
+  }
+  .en-tete-logo a img {
+    object-fit: contain;
+    height: 45px;
+    width: 426px;
+  }
+
+  /*----illustration du restaurant----*/
+  .illustration_restaurant {
+    width: 100%;
+    height: 270px;
+  }
+  .illustration_restaurant img {
+    width: 100%;
+    height: 330px;
+  }
+
+  /*----Menu----*/
+  .menu {
+    width: 100%;
+  }
+
+  /*----Footer ----*/
+  footer {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 426px) {
   .general_container {
     width: 100%;
