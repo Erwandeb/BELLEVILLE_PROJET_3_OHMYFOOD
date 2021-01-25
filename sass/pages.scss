@@ -557,7 +557,7 @@ body{
         }
     }
 
-    
+
     /*----illustration du restaurant----*/
     .illustration_restaurant{
         width:100%;
@@ -682,4 +682,130 @@ body{
         width:100%;
     align-items: center;
     }
+}
+
+@media screen and (max-width: 370px){
+    .general_container{
+        width:100%;
+     
+    }
+    /*----header----*/
+    header{
+        width:100% ;
+    
+        img{
+            object-fit: contain;
+            height: 45px;
+            width: 70%;
+        }
+    }
+
+    .en-tete-logo {
+        height: 63px;
+        width: 100%;
+    }
+    /*----Localisation----*/
+    .illustration_restaurant{
+        width:100%;
+        img{
+            width:100%;   
+        }
+    }
+/*----Menu---*/
+
+.menu{
+    
+    width: 100%;
+    padding-top: 5%;
+
+       
+
+        .nom_du_restaurant{
+        width:90%;   
+        }  
+
+ 
+    
+
+    .entree_plat_dessert{
+        width: 100%;
+        margin-top: 35px;
+        align-items: center;
+   
+           .titre_entree_plat_dessert{
+            height:32px;
+            margin-bottom:10px;
+            width: 80%;
+           }
+
+        /*------------------------------produit-----------------------*/
+            .produit{
+                height:70px;
+                width:90%;
+                border-radius: 15px;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                background-color:white;
+                box-shadow: $ombrage ;
+                padding:5px;
+                margin:7px;
+                position: relative;
+                transition: all ease-in-out 0.6s;
+                overflow: hidden;
+                cursor: pointer;
+                animation: intromenu 1.5s cubic-bezier(1,-0.25,.76,1.07);
+                
+                
+
+                    
+                    .description_produit{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        width: 90%;
+                        height:70px;
+                        padding:10px;
+                        overflow: hidden;
+                        transition: all ease-in-out 0.6s;
+
+        
+                        h3{
+                            font-weight:600;
+                            text-decoration: none;
+                            font-size: 16px;
+                        }
+                        
+                        p{
+                            font-weight:300;
+                            font-size: 14px;
+                            text-decoration: none;
+                        }
+                    }
+
+                    h4{
+                        position:absolute;
+                        right:22px;
+                        top:40px;
+                        text-decoration: none;
+                        transition: all ease-in-out 0.6s;
+                    }
+
+                }
+}    } 
+
+                
+  /*----Call to action-------*/
+.calltoaction {
+    width: 100%;
+    height: 175px;
+}
+
+
+    /*----Footer ----*/
+      footer{
+      
+         width:100%;
+   
+     }
 }
