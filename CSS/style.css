@@ -480,7 +480,7 @@ footer a:hover {
 
   footer {
     width: 100%;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 @media screen and (min-width: 426px) {
@@ -636,6 +636,124 @@ footer a:hover {
   }
   #restaurants .card_restaurant {
     margin: 10px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .general_container {
+    width: 100%;
+  }
+
+  /*----header----*/
+  header {
+    width: 100%;
+  }
+  header img {
+    object-fit: contain;
+    height: 45px;
+    width: 70%;
+  }
+
+  /*----Localisation----*/
+  .localisation {
+    width: 100%;
+    height: 50px;
+  }
+  .localisation .details_localisation {
+    width: 50%;
+  }
+  .localisation i {
+    width: 2em;
+  }
+  .localisation p {
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 2%;
+  }
+
+  /*----intro site----*/
+  main {
+    padding: 3%;
+    width: 100%;
+  }
+  main h1 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 8%;
+  }
+  main a {
+    width: 57%;
+  }
+  main a:hover {
+    transform: scale(1.02);
+  }
+
+  /*----fonctionnement----*/
+  .fonctionnement_du_site {
+    width: 100%;
+    padding: 5%;
+  }
+
+  .regle_fonctionnement {
+    width: 100%;
+    border-radius: 15px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 30px;
+  }
+  .regle_fonctionnement:hover {
+    background-color: #f5edff;
+  }
+
+  /*----selection restaurants----*/
+  #restaurants {
+    width: 100%;
+  }
+  #restaurants h2 {
+    width: 90%;
+    height: 30px;
+  }
+  #restaurants .card_restaurant {
+    width: 90%;
+  }
+  #restaurants .card_restaurant a {
+    text-decoration: none;
+  }
+  #restaurants .card_restaurant a img {
+    object-fit: cover;
+    height: 175px;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+  }
+  #restaurants .card_restaurant a .btn_nouveau {
+    background-color: #99e2d0;
+    color: #008766;
+    font-weight: 500;
+    font-size: x-small;
+    padding: 6px;
+    width: 20%;
+    height: 30px;
+    position: absolute;
+    top: 13px;
+    right: 12px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  #restaurants .card_restaurant a .description_restaurant {
+    display: flex;
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    height: 77px;
+    width: 100%;
+    border-radius: 0px 0px 15px 15px;
+    position: relative;
+  }
+
+  footer {
+    width: 100%;
+    align-items: flex-start;
   }
 }
 

@@ -21,7 +21,7 @@ ligne a écrire dans le terminal pour compiler le SASS vers CSS :
 .general_container{
     align-items:center;
     margin:auto;
-    width:375px;
+    width:$maquette-size;
     animation: chargement_page_accueil 2s ease-in-out;
 }
 
@@ -559,7 +559,7 @@ footer{
     footer{
      
         width:100%;
-    align-items: center;
+    align-items: flex-start;
     }
 }
 
@@ -745,4 +745,138 @@ footer{
 
     }
 
+}
+
+@media screen and (max-width: 370px){
+        .general_container{
+            width:100%;
+         
+        }
+        /*----header----*/
+        header{
+            width:100% ;
+        
+            img{
+                object-fit: contain;
+                height: 45px;
+                width: 70%;
+            }
+        }
+        /*----Localisation----*/
+        .localisation{
+        
+            width: 100%;
+            height: 50px;
+
+           
+        
+            .details_localisation{
+                width:50%;
+            }
+        
+            i{
+                width: 2em;
+            }
+        
+            p{
+                font-size: 16px;
+                font-weight:normal;
+                margin-left:2%;
+            }
+        }
+        /*----intro site----*/
+        main{
+           
+            padding: 3%;
+            width: 100%;
+            h1{
+                font-weight: bold;
+                font-size: 1.5rem;
+                margin: 8%;
+            }
+        
+                a {
+                    width:57%;
+                    &:hover{
+                       transform: scale(1.02) ;
+                    }
+                }
+            }
+    
+        /*----fonctionnement----*/
+        .fonctionnement_du_site{
+     
+            width: 100%;
+            padding: 5%;
+          
+        }
+        
+        .regle_fonctionnement{
+            width: 100%;
+            border-radius : 15px;
+            font-weight: bold;
+            position: relative;
+            padding-left:30px;
+        
+            &:hover{
+                background-color: $hover-color-light;
+            }
+        }
+        /*----selection restaurants----*/     
+        #restaurants{
+            width:100%;
+            h2{
+                width: 90%;
+                height:30px;
+            }
+                .card_restaurant{
+
+                    width:90%;
+                    
+                    a{
+                    text-decoration: none;
+        
+                        img{
+                            object-fit: cover;
+                            height: 175px;
+                            width:100%;
+                            border-radius: 15px 15px 0px 0px;
+                        }
+                
+                        .btn_nouveau {
+                            background-color :$green-background;
+                            color:$green-font;
+                            font-weight:500;
+                            font-size:x-small;
+                            padding: 6px;
+                            width: 20%;
+                            height:30px;
+                            position:absolute;
+                            top: 13px;
+                            right: 12px;
+                            text-align: center;
+                            border-radius: 5px;
+                        }
+                
+        
+                        .description_restaurant{
+                            display: flex;
+                            background-color:white;
+                            text-align: center;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 2%;
+                            height:77px;
+                            width:100%;
+                            border-radius: 0px 0px 15px 15px;
+                            position: relative;
+                        }
+                    } 
+                }
+        }
+        footer{
+         
+            width:100%;
+        align-items: flex-start;
+        }
 }
