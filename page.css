@@ -1,0 +1,671 @@
+@charset "UTF-8";
+/*couleurs principales*/
+/*couleurs de fond*/
+/*couleurs de fond*/
+/* police */
+/* Tailles */
+/*
+ligne a écrire dans le terminal pour compiler le SASS vers CSS :
+
+"./dart-sass/sass sass/pages.scss css/page.css --watch"
+./dart-sass/sass sass/pages.scss page.css --watch
+*/
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------ PAGE HTML-------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.general_container {
+  align-items: center;
+  margin: auto;
+  width: 375px;
+}
+
+body {
+  font-family: Roboto;
+  height: auto;
+}
+
+/*--------------Header du site et Logo----------------------------------*/
+.en-tete-logo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 375px;
+  position: relative;
+  height: 63px;
+  width: 375px;
+}
+.en-tete-logo a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 63px;
+  width: 35px;
+}
+.en-tete-logo a i {
+  font-size: 18px;
+  position: absolute;
+  left: 22px;
+  color: black;
+}
+.en-tete-logo a i:hover {
+  transform: scale(1.08);
+}
+.en-tete-logo a img {
+  object-fit: contain;
+  height: 45px;
+  width: 165px;
+}
+
+/*--------------Image illustration du site internet en début de page ----------------------------------*/
+.illustration_restaurant {
+  width: 375px;
+  height: 270px;
+  position: relative;
+  object-fit: cover;
+  z-index: -1;
+}
+.illustration_restaurant img {
+  width: 375px;
+  height: 330px;
+  object-fit: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/*-------------MENU----------------------------------*/
+.menu {
+  border-radius: 35px 35px 0px 0px;
+  width: 375px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 35px;
+  background-color: #f6f6f6;
+}
+.menu .nom_du_restaurant {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 335px;
+  height: 35px;
+  position: relative;
+}
+.menu .nom_du_restaurant h1 {
+  font-family: "Shrikhand", cursive;
+}
+.menu .nom_du_restaurant .far {
+  opacity: 100%;
+  position: absolute;
+  right: 10px;
+  font-size: 18px;
+  z-index: 0;
+  font-weight: 200;
+  cursor: pointer;
+}
+.menu .nom_du_restaurant .far:hover {
+  font-weight: 900;
+  background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: heart 0.4s cubic-bezier(0, 0.69, 1, -0.05);
+}
+@keyframes heart {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 20%;
+  }
+  60% {
+    opacity: 35%;
+  }
+  70% {
+    opacity: 40%;
+  }
+  80% {
+    opacity: 45%;
+  }
+  90% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.menu .entree_plat_dessert {
+  height: auto;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 35px;
+  align-items: center;
+  /*------------------------------produit-----------------------*/
+}
+.menu .entree_plat_dessert .titre_entree_plat_dessert {
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 350px;
+}
+.menu .entree_plat_dessert .titre_entree_plat_dessert h2 {
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 20px;
+}
+.menu .entree_plat_dessert .titre_entree_plat_dessert .titre_souligné {
+  width: 40px;
+  height: 4px;
+  background-color: #99E2D0;
+}
+.menu .entree_plat_dessert .produit {
+  height: 70px;
+  width: 350px;
+  border-radius: 15px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0px 6px 9px 2px #00000030;
+  padding: 5px;
+  margin: 7px;
+  position: relative;
+  transition: all ease-in-out 0.6s;
+  overflow: hidden;
+  cursor: pointer;
+  animation: intromenu 1.5s cubic-bezier(1, -0.25, 0.76, 1.07);
+}
+.menu .entree_plat_dessert .produit .description_produit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: auto;
+  height: 70px;
+  padding: 10px;
+  overflow: hidden;
+  transition: all ease-in-out 0.6s;
+}
+.menu .entree_plat_dessert .produit .description_produit h3 {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+}
+.menu .entree_plat_dessert .produit .description_produit p {
+  font-weight: 300;
+  font-size: 14px;
+  text-decoration: none;
+}
+.menu .entree_plat_dessert .produit h4 {
+  position: absolute;
+  right: 22px;
+  top: 40px;
+  text-decoration: none;
+  transition: all ease-in-out 0.6s;
+}
+.menu .entree_plat_dessert .produit .validation_produit {
+  position: absolute;
+  width: 60px;
+  background-color: #99e2d0;
+  right: 0px;
+  top: 0px;
+  height: 70px;
+  z-index: 3;
+  border-radius: 0px 15px 15px 0px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  opacity: 100%;
+  right: -62px;
+  transition: all ease-in-out 0.6s;
+  overflow: hidden;
+}
+.menu .entree_plat_dessert .produit .validation_produit i {
+  color: white;
+  font-size: 16px;
+  transition: all ease-in-out 0.6s;
+}
+.menu .entree_plat_dessert .produit:hover .description_produit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 220px;
+  height: 70px;
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: all ease-in-out 0.6s;
+}
+.menu .entree_plat_dessert .produit:hover .description_produit h3 {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  width: 210px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu .entree_plat_dessert .produit:hover .description_produit p {
+  font-weight: 300;
+  font-size: 14px;
+  width: 210px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu .entree_plat_dessert .produit:hover h4 {
+  position: absolute;
+  right: 80px;
+  top: 40px;
+  text-decoration: none;
+  transition: all ease-in-out 0.6s;
+}
+.menu .entree_plat_dessert .produit:hover .validation_produit {
+  position: absolute;
+  width: 60px;
+  background-color: #99e2d0;
+  right: 0px;
+  top: 0px;
+  height: 70px;
+  z-index: 3;
+  border-radius: 0px 15px 15px 0px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  opacity: 100%;
+  transition: all ease-in-out 0.6s;
+}
+.menu .entree_plat_dessert .produit:hover .validation_produit i {
+  color: white;
+  font-size: 16px;
+  transition: all ease-in-out 0.6s;
+  opacity: 100%;
+  transform: rotate(365deg);
+  transition-delay: 0.1s;
+}
+
+/*--------Call to action---------------*/
+.calltoaction {
+  width: 375px;
+  height: 175px;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+.calltoaction a {
+  border-radius: 25px;
+  background-image: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  border: none;
+  color: white;
+  width: 215px;
+  height: 50px;
+  box-shadow: 0px 6px 9px 2px #00000030;
+  bottom: 80px;
+  font-weight: 400;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  cursor: pointer;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+.calltoaction a:hover {
+  background-image: linear-gradient(to bottom, #ff79d9f1 0%, #9256dce7 100%);
+  font-weight: bold;
+}
+
+/*--------------Call to action----------------------------------*/
+/*--------------Footer ----------------------------------*/
+footer {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #353535;
+  color: white;
+  text-decoration: none;
+  width: 375px;
+  height: 200px;
+}
+footer a img {
+  width: 100px;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+footer a img:hover {
+  transform: scale(1.02);
+}
+footer .Proposer_un_restaurant {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+footer .Proposer_un_restaurant i {
+  font-size: 12px;
+}
+footer .Proposer_un_restaurant a:hover {
+  font-weight: bold;
+}
+footer .Devenir_partenaire {
+  display: flex;
+  width: 148px;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+footer .Devenir_partenaire i {
+  font-size: 12px;
+}
+footer .Devenir_partenaire a:hover {
+  font-weight: bold;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+footer a:hover {
+  font-weight: bold;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------ FIN INDEX.HTML--------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+@keyframes intromenu {
+  0% {
+    opacity: 0%;
+    margin: 14px;
+  }
+  10% {
+    opacity: 0%;
+    margin: 12px;
+  }
+  50% {
+    opacity: 20%;
+    margin: 10px;
+  }
+  75% {
+    opacity: 40%;
+    margin: 9px;
+  }
+  85% {
+    opacity: 50%;
+    margin: 7px;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+/*-----------------------------------------------------------------------------------------*/
+/*------------------------------ MEDIAS QUERIES-------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
+@media screen and (min-width: 376px) {
+  .general_container {
+    width: 100%;
+  }
+
+  /*----header----*/
+  .en-tete-logo {
+    width: 100%;
+  }
+  .en-tete-logo a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 63px;
+    width: 35px;
+  }
+  .en-tete-logo a i {
+    font-size: 18px;
+    position: absolute;
+    left: 22px;
+    color: black;
+  }
+  .en-tete-logo a i:hover {
+    transform: scale(1.08);
+  }
+  .en-tete-logo a img {
+    object-fit: contain;
+    height: 45px;
+    width: 426px;
+  }
+
+  /*----illustration du restaurant----*/
+  .illustration_restaurant {
+    width: 100%;
+    height: 270px;
+  }
+  .illustration_restaurant img {
+    width: 100%;
+    height: 330px;
+  }
+
+  /*----Menu----*/
+  .menu {
+    width: 100%;
+  }
+
+  /*----Footer ----*/
+  footer {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 426px) {
+  .general_container {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /*animation: chargement_page_accueil 2s ease-in-out;*/
+  }
+
+  /*----header----*/
+  .en-tete-logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    height: 63px;
+  }
+  .en-tete-logo a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 63px;
+    width: 35px;
+  }
+  .en-tete-logo a i {
+    font-size: 18px;
+    position: absolute;
+    left: 22px;
+    color: black;
+  }
+  .en-tete-logo a i:hover {
+    transform: scale(1.08);
+  }
+  .en-tete-logo a img {
+    object-fit: contain;
+    height: 45px;
+    width: 426px;
+  }
+
+  /*----illustration du restaurant----*/
+  .illustration_restaurant {
+    width: 100%;
+    height: 270px;
+  }
+  .illustration_restaurant img {
+    width: 100%;
+    height: 330px;
+  }
+
+  /*----Menu----*/
+  .menu {
+    border-radius: 35px 35px 0px 0px;
+    height: auto;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35px;
+    background-color: #f6f6f6;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*----Footer ----*/
+  footer {
+    width: 100%;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .general_container {
+    width: 1024px;
+    /*animation: chargement_page_accueil 2s ease-in-out;*/
+  }
+
+  .menu {
+    width: 924px;
+  }
+
+  /*----Footer ----*/
+  footer {
+    width: 100%;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 370px) {
+  .general_container {
+    width: 100%;
+  }
+
+  /*----header----*/
+  header {
+    width: 100%;
+  }
+  header img {
+    object-fit: contain;
+    height: 45px;
+    width: 70%;
+  }
+
+  .en-tete-logo {
+    height: 63px;
+    width: 100%;
+  }
+
+  /*----Localisation----*/
+  .illustration_restaurant {
+    width: 100%;
+  }
+  .illustration_restaurant img {
+    width: 100%;
+  }
+
+  /*----Menu---*/
+  .menu {
+    width: 100%;
+    padding-top: 5%;
+  }
+  .menu .nom_du_restaurant {
+    width: 90%;
+  }
+  .menu .entree_plat_dessert {
+    width: 100%;
+    margin-top: 35px;
+    align-items: center;
+    /*------------------------------produit-----------------------*/
+  }
+  .menu .entree_plat_dessert .titre_entree_plat_dessert {
+    height: 32px;
+    margin-bottom: 10px;
+    width: 80%;
+  }
+  .menu .entree_plat_dessert .produit {
+    height: 70px;
+    width: 90%;
+    border-radius: 15px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 6px 9px 2px #00000030;
+    padding: 5px;
+    margin: 7px;
+    position: relative;
+    transition: all ease-in-out 0.6s;
+    overflow: hidden;
+    cursor: pointer;
+    animation: intromenu 1.5s cubic-bezier(1, -0.25, 0.76, 1.07);
+  }
+  .menu .entree_plat_dessert .produit .description_produit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 70px;
+    padding: 10px;
+    overflow: hidden;
+    transition: all ease-in-out 0.6s;
+  }
+  .menu .entree_plat_dessert .produit .description_produit h3 {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .menu .entree_plat_dessert .produit .description_produit p {
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .menu .entree_plat_dessert .produit h4 {
+    position: absolute;
+    right: 22px;
+    top: 40px;
+    text-decoration: none;
+    transition: all ease-in-out 0.6s;
+  }
+
+  /*----Call to action-------*/
+  .calltoaction {
+    width: 100%;
+    height: 175px;
+  }
+
+  /*----Footer ----*/
+  footer {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=page.css.map */
