@@ -18,7 +18,9 @@ Ce projet consiste à créer un site mobile first, spécialisé dans la reservat
 ## Quelques captures d'écrans : 
 
 
+<img width="930" alt="Capture" src="https://user-images.githubusercontent.com/73883090/152318592-99fca999-43be-4d5d-885b-1e6713e835d4.PNG">
 
+<img width="930" alt="Capture2" src="https://user-images.githubusercontent.com/73883090/152318607-273faa6b-6efc-4ff1-9094-7e7c9ebc4178.PNG">
 
 
 
